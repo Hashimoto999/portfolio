@@ -1,0 +1,234 @@
+/* PC,スマホ共通スタイル */
+body{
+  font-family:'Times New Roman', "Yu Gothic UI", system-ui;
+  background-color: #1d1d1d;
+}
+
+p{
+  font-size: 15px;
+}
+
+/* ============
+PC用のスタイル
+============= */
+/* 横幅設定 */
+body{
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+/* ヘッダー */
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ナビゲーションレイアウト */
+#nav-pc{
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+/* ナビゲーションのリンクの装飾設定 */
+#nav-pc > a{
+  display: inline-block;
+  font-size: 100%;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 3px 15px;
+  color: #1d1d1d;
+  background-color: #e0e0e0;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+#nav-pc > a:link{
+  color: #1d1d1d;
+}
+#nav-pc > a:visited{
+  color: #1d1d1d;
+}
+#nav-pc > a:hover{
+  color: #1d1d1d;
+  background-color: #778899;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#nav-pc > a:active{
+  color: #1d1d1d;
+}
+
+/* ロゴレイアウト */
+#logo{
+  font-size: 25px;
+  padding: 0 10px;
+  color: #e0e0e0;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+#logo::before{
+  background: #778899;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0,1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+}
+#logo:hover{
+  color: #e0e0e0;
+}
+#logo:hover::before{
+  transform-origin: left top;
+  transform: scale(1,1);
+}
+
+
+/* メインビジュアル */
+#main-visual{
+  position: relative;
+  margin: 5px 0 50px 0;
+}
+
+#main-message{
+  position: absolute;
+  background-color: rgba(119,136,153,0.55);
+  margin: 30px 0 0 30px;
+  padding: auto;
+}
+#main-visual > img{
+  width: 100%;
+}
+#main-message > h1{
+  font-size: 60px;
+  font-weight: bold;
+  margin: 30px 60px 0 60px;
+}
+#main-message > p{
+  font-size: 35px;
+  margin: 0 0 30px 60px;
+  letter-spacing: 0.24em;
+}
+
+/* ABOUTセクション */
+.index-h2{
+  color: #e0e0e0;
+  letter-spacing: 0.12em;
+  font-size: 30px;
+  position: relative;
+  padding-top: 40px;
+}
+.index-h2::after{
+  content: ">";
+  margin-left: 5px;
+}
+#about-flex{
+  display: flex;
+  justify-content: center;
+}
+/* ABOUTセクション共通スタイル */
+.about-div01,.about-div02,.about-div03{
+  background-size: cover;
+  margin: 0 15px;
+  padding: 30px;
+  width: 240px;
+  height: 480px;
+  border-radius: 330px / 580px;
+}
+.about-div01{
+  background-image: url(images/about01.jpg);
+}
+.about-div02{
+  background-image: url(images/about02.jpg);
+}
+.about-div03{
+  background-image: url(images/about03.jpg);
+}
+
+.about-div01 > h3,
+.about-div02 > h3,
+.about-div03 > h3{
+  text-align: center;
+  font-size: 28px;
+  margin: 70px 25px 0 25px;
+  background-color: rgba(244,244,244,0.5);
+}
+.about-div01 > h3::before,
+.about-div02 > h3::before,
+.about-div03 > h3::before{
+  content: "#";
+  margin-right: 2px;
+}
+ .flame{
+  font-family:'Century Gothic', "Yu Gothic UI", system-ui;
+  background-color: rgba(244,244,244,0.5);
+  margin: 20px auto;
+  height: 280px;
+  width: 220px;
+  position: relative;
+}
+
+ /* ABOUTセクション/Profile */
+.flame > table{
+  position: absolute;
+  margin: 40% 17px;
+}
+.profile-title{
+  text-align: center;
+  font-weight: bold;
+}
+/* ABOUTセクション/Hobby */
+.flame > .hobby-div{
+  text-align: center;
+  padding-top: 55px;
+}
+.hobby-div > p{
+  margin-top: 20px;
+}
+ /* ABOUTセクション/Programing */
+.programing-div{
+  padding-top: 10px;
+}
+.programing-div > h4,.programing-div > p{
+  text-align: center;
+}
+.programing-div > p{
+  margin-top: 0;
+}
+.programing-div > h4{
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+/* WORKSセクション共通スタイル */
+.works-div > h3{
+  color: #e0e0e0;
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 70px 0 10px 20px;
+}
+.works-img > img{
+  display: inline;
+  height: 350px;
+  justify-content: space-around;
+  padding: auto;
+  margin: 0 10px;
+}
+.works-img{
+  text-align: center;
+}
+.works-text{
+  font-family:'Century Gothic', "Yu Gothic UI", system-ui;
+  color: #e0e0e0;
+}
+/* WORKSセクション/イラスト */
